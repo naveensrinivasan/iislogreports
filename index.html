@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Iislogreports by naveensrinivasan</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Iislogreports</h1>
+        <p>IIS log analysis</p>
+
+        <p class="view"><a href="https://github.com/naveensrinivasan/iislogreports">View the Project on GitHub <small>naveensrinivasan/iislogreports</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/naveensrinivasan/iislogreports/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/naveensrinivasan/iislogreports/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/naveensrinivasan/iislogreports">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>README</h1>
+
+<p><strong>iislogreports</strong> is for analyzing IIS logs using <a href="https://www.linqpad.net/" title="LINQPad">LinqPad</a> and using SQL Server as a store.</p>
+
+<h2>Prerequisites</h2>
+
+<ol>
+<li>LINQPad</li>
+<li>cygwin ( I use cygwin to run the shell script for cleaning the file. This could be substituted with anything else.)</li>
+</ol><h2>Setup</h2>
+
+<ul>
+<li>Copy the iis logs folder to a folder.</li>
+<li>Copy the sed-iis.sh to root of the logs folder and run the script. The sed script removes the iis header lines starting with "#".</li>
+<li>Move the folder to the SQL Server. To use it in bulkimport.</li>
+<li>Run createtable.sql to create the logs table.</li>
+<li>Run the script bulkimport-iis.sql to load the log files into the table.</li>
+<li>Open the iislogs.linq and execute to get the reports.</li>
+</ul><h3>Sample report</h3>
+
+<p><img src="https://dl.dropbox.com/u/19639689/images/iislogs.jpg" alt=""></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/naveensrinivasan">naveensrinivasan</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
